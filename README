@@ -1,0 +1,81 @@
+Suppose that towers(5, 2, 3) is invoked. 
+	
+1. How will the first recursive call to towers() be invoked? Answer this question in the form: towers(x, y, z) where you give the actual values to the three parameters.
+
+Answer: 	since towers(5, 2, 3) is invoked where n=5, from =2 and dest =3, looking at towers(n-1, from, spare) and unsigned int spare = 6 - from - dest. spare would equal 1. thus towers(4,2,1) 
+
+
+2.  How many recursive calls to towers() will be made before this first recursive call actually returns to the initial invocation?
+
+ Answer:		5 recursive calls starting at towers(4,2,1) and using towers(n-1, from, spare) plus spare = 6 - from - dest to make n reach n=1. will not pass if statement if 			n<0
+
+1st recursive call	    ..towers(4,2,1)
+2nd recursive call		 ...towers(3,2,3)
+3rd recursive call		 ....towers(2,2,1)
+4th recursive call		 .....towers(1,2,3)
+5th recursive call		 ......towers(0,2,1)
+
+3.  Once towers(5, 2, 3) has invoked its first recursive call to towers() and this invocation has returned, what will be printed to stdout? (i.e. What actual move will be made by towers(5, 2, 3) ?)
+
+Answer: 
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+2 1
+3 1
+3 2
+1 2
+3 1
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+1 2
+3 1
+3 2
+1 2
+1 3
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+
+
+
+
+
+4. How will the second recursive call to towers() be invoked? Answer this question in the form: towers(x, y, z) where you give the actual values to the three parameters
+
+	
+	Answer: 	The second recursive call will be towers(3,2,3) as mentioned in question 2 and question 1 as well.
+
+
+5. Suppose that towers(8, 1, 2) is invoked. How many lines will be printed to stdout?
+
+Answer:  The formula for time complexity is 2^(n) -1. thus, for towers(8, 1, 2) n= 8. there 2^(8)-1 = 255. therefore 255 lines will be printed out. 
+
+
+6.  A brief description of what you did (and did not) achieve in the Lab.
+
+	Learned how towers of Hanoi works using recursion. I was able to determine the number of recursion calls and what the expected outcome should be before looking at the output. I also learned that to determine the number of moves taken is 2^(n) - 1. I was able to edit and fix the main file to output the command without any errors or bugs such as returning illegal arguments (negative numbers, etc). At the end of the lab, everything worked as intended to with no output errors. 
+
+
+
+
+
+
+
+
+
+
+
